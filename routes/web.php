@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +25,7 @@ Route::get('/course', function() {
 Route::get('/about-us', function() {
     return view('about_us');
 });
+/*
 
 Route::get('/news/{id}',function($id){
     return view('news',['newsId' => $id]);
@@ -32,3 +35,8 @@ Route::get('/news/{id}',function($id){
 Route::get('/category/{id}', function($id){
     return view('category',['category'=> $id]);
 });
+*/
+
+Route::get('/news/{id}/{abcd}', [NewsController::class,'news']);
+Route::get('/department/create',[DepartmentController::class,'create']);
+Route::post('/department/store',[DepartmentController::class,'store']);
