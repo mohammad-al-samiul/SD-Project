@@ -1,0 +1,35 @@
+/\*
+
+1. composer create-project laravel/laravel project_name
+
+2. start xampp server and start apache and MySQL module from xampp
+
+3. start the server with this command -> php artisan serve
+
+//creating controller
+
+4. creating controller help of this command -> php artisan make:controller CourseController
+
+// creating mooel and migration
+
+-   each model will communicate with one table in the database
+-   table will be created using migration
+
+5. creating model and migration with this command -> php artisan make:model Course -m
+
+6. create a database from phpmyadmin
+
+7. connect the database with env file
+
+8. create a table from migration file and perform this command
+
+github command
+
+1.composer install
+2.npm install
+3.npm run dev
+4.cp .env example .env
+5.php artisan key:generate
+6.php artisan migrate
+
+\*/

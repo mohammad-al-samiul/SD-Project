@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
-    public function news($id,$x)
+    public function news($id)
     {
         $email = 'alsamiul123@gmail.com';
         $phone = '01832997080';
