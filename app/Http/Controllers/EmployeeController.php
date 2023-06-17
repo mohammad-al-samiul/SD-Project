@@ -22,7 +22,7 @@ class EmployeeController extends Controller
         $obj->gender = $request->gender;
         $obj->address = $request->address;
         if ($obj->save()) {
-            echo "Employee created Successfully";
+            echo 'Employee Inserted Successfully';
         }
     }
 }
