@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('code');
             $table->date('established_at');
+            $table->string('teacher');
             $table->timestamps();
         });
     }

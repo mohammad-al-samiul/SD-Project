@@ -10,8 +10,8 @@
 
 <body>
     <div class="container">
-        <h1>Employee Form</h1>
-        <form>
+        <h1 class="text-center mb-5">Employee Form</h1>
+        <form action="{{url('/employee/store')}}" method="post">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputName4">Name</label>
@@ -36,11 +36,11 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputSalary">Salary</label>
-                    <input type="text" class="form-control" id="inputSalary">
+                    <input type="text" name="salary" class="form-control" id="inputSalary">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputDepartment">Department</label>
-                    <select id="inputDepartment" class="form-control">
+                    <select id="inputDepartment" name="department" class="form-control">
                         <option selected>CSE</option>
                         <option>EEE</option>
                         <option>LAW</option>
@@ -53,15 +53,15 @@
 
                 <div class="custom-control custom-radio custom-control-inline">
 
-                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <input type="radio" id="customRadioInline1" name="gender" value="male" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline1">Male</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <input type="radio" id="customRadioInline2" name="gender" value="female" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline2">Female</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                    <input type="radio" id="customRadioInline3" name="gender" value="unknown" class="custom-control-input">
                     <label class="custom-control-label" for="customRadioInline3">Unknown</label>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary  btn-md btn-block">Sign in</button>
         </form>
     </div>
 
