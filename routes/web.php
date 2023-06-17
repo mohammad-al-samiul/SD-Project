@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/course', function() {
+Route::get('/course', function () {
     return view('course');
 });
 
-Route::get('/about-us', function() {
+Route::get('/about-us', function () {
     return view('about_us');
 });
 /*
@@ -37,6 +38,12 @@ Route::get('/category/{id}', function($id){
 });
 */
 
-Route::get('/news/{id}/{abcd}', [NewsController::class,'news']);
-Route::get('/department/create',[DepartmentController::class,'create']);
-Route::post('/department/store',[DepartmentController::class,'store']);
+Route::get('/news/{id}/{abcd}', [NewsController::class, 'news']);
+
+Route::get('/department/create', [DepartmentController::class, 'create']);
+
+Route::post('/department/store', [DepartmentController::class, 'store']);
+
+Route::get('/employee/create', [EmployeeController::class, 'create']);
+
+Route::post('/employee/store', [EmployeeController::class, 'store']);
