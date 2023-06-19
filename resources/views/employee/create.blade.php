@@ -18,10 +18,20 @@
                     <div class="form-group col-md-6">
                         <label for="inputName4">Name</label>
                         <input type="text" class="form-control" name="name" id="inputName4" placeholder="Name">
+                        <span class="text-danger">
+                            @error('name')
+                            {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
                         <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <span class="text-danger">
+                            @error('email')
+                            {{ $message }}
+                            @enderror
+                        </span>
                     </div>
 
                 </div>
@@ -39,6 +49,11 @@
                     <div class="form-group col-md-6">
                         <label for="inputSalary">Salary</label>
                         <input type="text" name="salary" class="form-control" id="inputSalary">
+                        <span class="text-danger">
+                            @error('salary')
+                            {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputDepartment">Department</label>
@@ -51,12 +66,13 @@
 
                 </div>
                 <div>
-                    <label for="inputDepartment">What is your gender?</label><br>
+                    <p>What is your gender?</p>
 
                     <div class="custom-control custom-radio custom-control-inline">
 
                         <input type="radio" id="customRadioInline1" name="gender" value="male" class="custom-control-input">
                         <label class="custom-control-label" for="customRadioInline1">Male</label>
+
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="customRadioInline2" name="gender" value="female" class="custom-control-input">
@@ -65,7 +81,14 @@
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="customRadioInline3" name="gender" value="unknown" class="custom-control-input">
                         <label class="custom-control-label" for="customRadioInline3">Others</label>
+
                     </div>
+                    <br>
+                    <span class="text-danger">
+                        @error('gender')
+                        {{ $message }}
+                        @enderror
+                    </span>
                 </div>
                 <div class="form-group mt-3">
                     <div class="form-check">

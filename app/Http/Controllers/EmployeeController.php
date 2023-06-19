@@ -13,6 +13,15 @@ class EmployeeController extends Controller
     }
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required|email',
+                'salary' => 'required',
+                'gender' => 'required',
+            ]
+        );
+
         $obj = new Employee();
         $obj->name = $request->name;
         $obj->email = $request->email;
