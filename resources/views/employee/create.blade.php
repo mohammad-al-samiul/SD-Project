@@ -64,14 +64,14 @@
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="customRadioInline3" name="gender" value="unknown" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline3">Unknown</label>
+                        <label class="custom-control-label" for="customRadioInline3">Others</label>
                     </div>
                 </div>
                 <div class="form-group mt-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="status">
                         <label class="form-check-label" for="gridCheck">
-                            Remember me
+                            Active
                         </label>
                     </div>
                 </div>

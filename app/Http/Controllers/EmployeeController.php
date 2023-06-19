@@ -21,8 +21,15 @@ class EmployeeController extends Controller
         $obj->department = $request->department;
         $obj->gender = $request->gender;
         $obj->address = $request->address;
+        $obj->status = $request->status == true ? 1 : 0;
         if ($obj->save()) {
             echo 'Employee Inserted Successfully';
         }
+    }
+
+    public function all()
+    {
+        $employees = Employee::all();
+        return view('employee.all', compact('employees'));
     }
 }

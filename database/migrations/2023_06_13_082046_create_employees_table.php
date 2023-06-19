@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('department');
             $table->string('gender');
             $table->mediumText('address');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
