@@ -44,8 +44,24 @@ Route::get('/department/create', [DepartmentController::class, 'create']);
 
 Route::post('/department/store', [DepartmentController::class, 'store']);
 
+Route::get('/department/all', [DepartmentController::class, 'all']);
+
+Route::get('/department/edit/{id}', [DepartmentController::class, 'edit']);
+
+Route::post('/department/update/{id}', [DepartmentController::class, 'update']);
+
+Route::get('/department/delete/{id}', [DepartmentController::class, 'delete']);
+
+
+
 Route::get('/employee/create', [EmployeeController::class, 'create']);
 
 Route::post('/employee/store', [EmployeeController::class, 'store']);
 
 Route::get('/employee/all', [EmployeeController::class, 'all']);
+
+Route::get('/employee/edit/{id}', [EmployeeController::class, 'edit']);
+
+Route::post('/employee/update/{id}', [EmployeeController::class, 'update']);
+
+Route::get('/employee/delete/{id}', [EmployeeController::class, 'delete']);
