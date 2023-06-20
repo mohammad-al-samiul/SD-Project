@@ -17,7 +17,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputName4">Name</label>
-                        <input type="text" class="form-control" name="name" id="inputName4" placeholder="Name">
+                        <input type="text" class="form-control" name="name" id="inputName4" placeholder="Name" value="{{old('name')}}">
                         <span class="text-danger">
                             @error('name')
                             {{ $message }}
@@ -26,8 +26,8 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputEmail4">Email</label>
-                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        <span class="text-danger">
+                        <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="Email" value="{{old('email')}}">
+                        <span class=" text-danger">
                             @error('email')
                             {{ $message }}
                             @enderror
@@ -35,20 +35,20 @@
                     </div>
 
                 </div>
-                <div class="form-group ">
-                    <label class="control-label" for="date">Joining Date</label>
+                <div class=" form-group ">
+                    <label class=" control-label" for="date">Joining Date</label>
                     <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date" />
                 </div>
 
                 <div class="form-group">
                     <label for="inputAddress">Address</label>
-                    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor">
+                    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="Apartment, studio, or floor" value="{{old('address')}}">
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputSalary">Salary</label>
-                        <input type="text" name="salary" class="form-control" id="inputSalary">
+                        <input type="text" name="salary" class="form-control" id="inputSalary" value="{{old('salary')}}">
                         <span class="text-danger">
                             @error('salary')
                             {{ $message }}
@@ -70,16 +70,16 @@
 
                     <div class="custom-control custom-radio custom-control-inline">
 
-                        <input type="radio" id="customRadioInline1" name="gender" value="male" class="custom-control-input">
+                        <input type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="male" {{ old('gender')=='male' ? 'checked' : ''}}>
                         <label class="custom-control-label" for="customRadioInline1">Male</label>
 
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" name="gender" value="female" class="custom-control-input">
+                        <input type="radio" id="customRadioInline2" name="gender" value="female" {{ old('gender')=='female' ? 'checked' : ''}} class="custom-control-input">
                         <label class="custom-control-label" for="customRadioInline2">Female</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline3" name="gender" value="unknown" class="custom-control-input">
+                        <input type="radio" id="customRadioInline3" name="gender" value="others" {{ old('gender')=='others' ? 'checked' : ''}} class="custom-control-input">
                         <label class="custom-control-label" for="customRadioInline3">Others</label>
 
                     </div>
