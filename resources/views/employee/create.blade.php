@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1 class="text-center mb-5">Employee Form</h1>
-        <form action="{{url('/employee/store')}}" method="post">
+        <form action="{{url('/employee/all')}}" method="post">
             @csrf
             <div>
                 <div class="form-row">

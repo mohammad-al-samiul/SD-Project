@@ -60,4 +60,10 @@ class EmployeeController extends Controller
             return redirect('/employee/all');
         }
     }
+    public function  delete($id)
+    {
+        if (Employee::find($id)->delete()) {
+            return redirect('/employee/all');
+        };
+    }
 }

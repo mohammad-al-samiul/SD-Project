@@ -39,6 +39,29 @@
                     <td>
                         <a href="{{url('employee/edit/'.$e->id)}}" class="btn btn-secondary">Edit</a>
                         <a href="{{url('employee/delete/'.$e->id)}}" class="btn btn-danger" data-toggle="modal" data-target="#employeeDeleteModal{{$e->id}}">Delete</a>
+                        <div class="modal" id="employeeDeleteModal{{$e->id}}">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Delete Confirmation</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        Are you sure want to delete <b>{{$e->name}}</b>?
+                                    </div>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <a class="btn btn-danger" href="{{url('employee/delete/'.$e->id)}}">Yes</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>
                 @endforeach
