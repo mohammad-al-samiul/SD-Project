@@ -41,4 +41,23 @@ class EmployeeController extends Controller
         $employees = Employee::all();
         return view('employee.all', compact('employees'));
     }
+
+    public function edit($id)
+    {
+        echo $id;
+        $employees = Employee::find($id);
+        return view('employee.edit', compact('employees'));
+    }
+    public function update(Request $req, $id)
+    {
+        $obj = Employee::find($id);
+        $obj->name = $req->name;
+        $obj->email = $req->email;
+        $obj->salary = $req->salary;
+        $obj->department = $req->department;
+
+        if ($obj->save()) {
+            return redirect('/employee/all');
+        }
+    }
 }

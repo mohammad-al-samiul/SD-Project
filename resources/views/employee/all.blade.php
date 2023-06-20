@@ -20,12 +20,13 @@
 <body>
     <h1>This is all employee</h1>
     <div class="container ">
-        <table class="table-striped table-bordered">
+        <table class="table table-striped table-bordered">
             <thead>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Department</th>
                 <th>Salary</th>
+                <th>Action</th>
 
             </thead>
             <tbody>
@@ -35,6 +36,10 @@
                     <td>{{$e->email}}</td>
                     <td>{{$e->department}}</td>
                     <td>{{$e->salary}}</td>
+                    <td>
+                        <a href="{{url('employee/edit/'.$e->id)}}" class="btn btn-secondary">Edit</a>
+                        <a href="{{url('employee/delete/'.$e->id)}}" class="btn btn-danger" data-toggle="modal" data-target="#employeeDeleteModal{{$e->id}}">Delete</a>
+                    </td>
                 </tr>
                 @endforeach
 
